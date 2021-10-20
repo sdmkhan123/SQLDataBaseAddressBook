@@ -24,3 +24,9 @@ insert into Address_Book values
 ('Stephen','Strange','177A Bleecker Street, Greenwich Village','Manhattan','NewYork','10431','6300964579','drStrange@yahoo.com'),
 ('Thor','Odinson','RoyalPalace','Asgard','Florida','224','7849876734','thor@rediffmail.com'),
 ('Natasha','Romanoff','Broadway street','NewYork City','NewYork','10028','45667365277','blackwidow@gmail.com')
+-- View AddressBook table
+select * from Address_Book
+-- UC-4: Edit existing contact using persons's name
+update Address_Book
+set PhoneNumber = '7654567885',Zipcode='534260' where FirstName = 'Bruce';
+select* from Address_Book;
