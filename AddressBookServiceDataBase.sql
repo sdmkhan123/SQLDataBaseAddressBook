@@ -30,3 +30,7 @@ select * from Address_Book
 update Address_Book
 set PhoneNumber = '7654567885',Zipcode='534260' where FirstName = 'Bruce';
 select* from Address_Book;
+-- UC-5: Delete contact using person's name
+delete Address_Book
+where FirstName = 'Natasha';
+select* from Address_Book;
