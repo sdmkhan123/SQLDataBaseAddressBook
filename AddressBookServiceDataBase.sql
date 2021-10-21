@@ -3,6 +3,7 @@ create database AddressBookServiceDB;
 -- View database name
 use AddressBookServiceDB;
 select DB_NAME()
+
 --UC-2: Create table in the database
 create table Address_Book
 (
@@ -15,6 +16,7 @@ Zipcode varchar(6) not null,
 PhoneNumber varchar(12) not null,
 Email varchar(25) not null
 );
+
 -- UC-3: Inserting data in table
 insert into Address_Book values
 ('Tony','Stark','Stark Tower 59th Street Broadway','Manhattan','NewYork','100001','8987224534','ironman@gmail.com'),
@@ -26,14 +28,23 @@ insert into Address_Book values
 ('Natasha','Romanoff','Broadway street','NewYork City','NewYork','10028','45667365277','blackwidow@gmail.com')
 -- View AddressBook table
 select * from Address_Book
+
 -- UC-4: Edit existing contact using persons's name
 update Address_Book
 set PhoneNumber = '7654567885',Zipcode='534260' where FirstName = 'Bruce';
 select* from Address_Book;
+
 -- UC-5: Delete contact using person's name
 delete Address_Book
 where FirstName = 'Natasha';
 select* from Address_Book;
+
 -- UC-6: Retrieve contacts belonging to City or state from Address_Book
 select * from Address_Book
 where City = 'Brooklyn' or State = 'Texas';
+
+--UC-7:
+-- Count contacts by City in Address_Book  
+select City,count(City) from Address_Book group by City;
+-- Count contacts by State in Address_Book  
+select State,count(State) from Address_Book group by State;
