@@ -61,3 +61,5 @@ update address_book set addressbook_name = 'Home',type = 'Family' where FirstNam
 update address_book set addressbook_name = 'Home',type = 'Friends' where FirstName = 'Steve' or FirstName = 'Bruce' or FirstName = 'Thor';
 update address_book set addressbook_name = 'Office',type = 'Profession' where FirstName = 'Stephen' or FirstName = 'Natasha';
 select * from Address_book;
+-- UC-10: Count contacts by type
+select type, COUNT(FirstName) from address_book group by type;
