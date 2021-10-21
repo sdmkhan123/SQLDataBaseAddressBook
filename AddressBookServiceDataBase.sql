@@ -63,3 +63,7 @@ update address_book set addressbook_name = 'Office',type = 'Profession' where Fi
 select * from Address_book;
 -- UC-10: Count contacts by type
 select type, COUNT(FirstName) from address_book group by type;
+-- UC-11: Add a contact to both Friend and Family type
+Insert into address_book values
+('Peter','Parker','20 Ingram Street, Forest Hills, Queens','NewYork City','NewYork','10023','4013224355','spiderman@gmail.com','Home','Friends');
+select * from address_book;
