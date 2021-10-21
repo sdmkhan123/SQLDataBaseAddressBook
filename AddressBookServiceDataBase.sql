@@ -48,3 +48,7 @@ where City = 'Brooklyn' or State = 'Texas';
 select City,count(City) from Address_Book group by City;
 -- Count contacts by State in Address_Book  
 select State,count(State) from Address_Book group by State;
+-- UC-8: Retrieve entries sorted alphabetically by Person’s name for a given city
+select * from Address_Book
+where City = 'Brooklyn'
+order by FirstName asc;
