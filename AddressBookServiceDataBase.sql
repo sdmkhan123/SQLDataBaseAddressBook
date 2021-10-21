@@ -34,3 +34,6 @@ select* from Address_Book;
 delete Address_Book
 where FirstName = 'Natasha';
 select* from Address_Book;
+-- UC-6: Retrieve contacts belonging to City or state from Address_Book
+select * from Address_Book
+where City = 'Brooklyn' or State = 'Texas';
